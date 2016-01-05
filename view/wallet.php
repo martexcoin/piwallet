@@ -55,7 +55,7 @@ if ($admin)
 <p id="pwdmsg"></p>
 <br />
 <p>Sacar:</p>
-<button type="button" class="btn btn-default" id="donate">Doe! <?=$fullname?></button><br />
+<button type="button" class="btn btn-default" id="donate">Doe!</button><br><br>
 <p id="donateinfo" style="display: none;">Insira o valor que deseja doar e clique em  <strong>Sacar</strong></p>
 <form action="index.php" method="POST" class="clearfix" id="withdrawform">
     <input type="hidden" name="action" value="withdraw" />

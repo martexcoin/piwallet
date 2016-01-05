@@ -4,6 +4,6 @@
         </div>
 
     </body>
-<b><center><p>Powered by <a href="http://github.com/johnathanmartin/piWallet">piWallet</a> e Adaptado por <a href="http://www.levinobre.com" target="_blank">Levi Nobre</a> (<a href="http://martexcoin.org/forum/index.php?topic=4.0" target="_blank">Martexcoin Core Developers</a>)</p>
+<b><center><p>Powered by <a href="http://github.com/johnathanmartin/piWallet" target="_blank">piWallet</a> e Adaptado por <a href="http://www.levinobre.com" target="_blank">Levi Nobre</a> (<a href="http://martexcoin.org/forum/index.php?topic=4.0" target="_blank">Martexcoin Core Developers</a>)</p>
 </center></b>
 </html>

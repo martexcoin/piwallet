@@ -33,7 +33,7 @@ if (!empty($_SESSION['user_session']))
             case "new_address":
                $client->getnewaddress($user_session);
                $json['success'] = true;
-               $json['message'] = "Um novo endere&ccedil;o foi gerado!";
+               $json['message'] = "Um novo endereço foi gerado!";
                $json['balance'] = $client->getBalance($user_session);
                $json['addressList'] = $client->getAddressList($user_session);
                $json['transactionList'] = $client->getTransactionList($user_session);
@@ -42,7 +42,7 @@ if (!empty($_SESSION['user_session']))
             case "withdraw":
                   $json['success'] = false;
                if (!WITHDRAWALS_ENABLED) {
-                  $json['message'] = "Saques est&atilde;o temporariamente inativos...";
+                  $json['message'] = "Saques estão temporariamente inativos...";
                } elseif (empty($_POST['address']) || empty($_POST['amount']) || !is_numeric($_POST['amount'])) {
                   $json['message'] = "Preencha todos os campos.";
                } elseif ($_POST['token'] != $_SESSION['token']) {
@@ -99,7 +99,7 @@ if (!empty($_SESSION['user_session']))
             case "withdraw":
                if (!WITHDRAWALS_ENABLED) {
                   $error['type'] = "withdraw";
-                  $error['message'] = "Saques est&atilde;o temporariamente inativos...";
+                  $error['message'] = "Saques estão temporariamente inativos...";
                } elseif (empty($_POST['address']) || empty($_POST['amount']) || !is_numeric($_POST['amount'])) {
                   $error['type'] = "withdraw";
                   $error['message'] = "Preencha todos os campos.";
@@ -185,7 +185,7 @@ break;
                         case "new_address":
                            $client->getnewaddress($info['username']);
                            $json['success'] = true;
-                           $json['message'] = "Um novo endere&ccedil;o foi gerado!";
+                           $json['message'] = "Um novo endereço foi gerado!";
                            $json['balance'] = $client->getBalance($info['username']);
                            $json['addressList'] = $client->getAddressList($info['username']);
                            $json['transactionList'] = $client->getTransactionList($info['username']);
@@ -194,7 +194,7 @@ break;
                         case "withdraw":
                            $json['success'] = false;
                            if (!WITHDRAWALS_ENABLED) {
-                              $json['message'] = "Saques est&atilde;o temporariamente inativos...";
+                              $json['message'] = "Saques estão temporariamente inativos...";
                            } elseif (empty($_POST['address']) || empty($_POST['amount']) || !is_numeric($_POST['amount'])) {
                               $json['message'] = "You have to fill all the fields";
                            } elseif ($_POST['amount'] > $info['balance']) {
@@ -223,7 +223,7 @@ break;
                                  $json['message'] = $result;
                               }
                            } else {
-                              $json['message'] = "Algo est&aacute; errado...";
+                              $json['message'] = "Algo está errado...";
                            }
                            echo json_encode($json); exit;
                            break;
@@ -240,7 +240,7 @@ break;
                         case "withdraw":
                            if (!WITHDRAWALS_ENABLED) {
                               $error['type'] = "withdraw";
-                              $error['message'] = "Saques est&atilde;o temporariamente inativos...";
+                              $error['message'] = "Saques estão temporariamente inativos...";
                            } elseif (empty($_POST['address']) || empty($_POST['amount']) || !is_numeric($_POST['amount'])) {
                               $error['type'] = "withdraw";
                               $error['message'] = "Preencha todos os campos.";
@@ -268,7 +268,7 @@ break;
                               }
                            } else {
                               $error['type'] = "password";
-                              $error['message'] = "Algo est&aacute; errado...";
+                              $error['message'] = "Algo está errado...";
                            }
                            break;
                      }
@@ -345,7 +345,7 @@ break;
             } else {
                $username   = $mysqli->real_escape_string(   strip_tags(          $_POST['username']   ));
                $_SESSION['user_session'] = $username;
-              $_SESSION['user_supportpin'] = "Fa&ccedil;a login novamente para ver o ID do Suporte.";
+              $_SESSION['user_supportpin'] = "Faça login novamente para ver o ID do Suporte.";
                header("Location: index.php");
             }
             break;
