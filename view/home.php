@@ -1,6 +1,16 @@
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+
+
+    <title>WebWallet MartexCoin</title>
+    
+    
+    
+    
 <style>
  @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -152,3 +162,6 @@ body {
 </script>
 
     
+  </body>
+</html>
+ 
