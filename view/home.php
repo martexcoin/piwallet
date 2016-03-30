@@ -112,8 +112,9 @@ body {
                       <h1>Login MartexCoin WebWallet</h1>
                     <form class="register-form" action="index.php" method="POST">
                       <input type="hidden" name="action" value="register" />
-                      <input type="text" placeholder="name"/>
-                      <input type="password" placeholder="password"/>
+                      <input type="text" name="username" placeholder="Usuario"/>
+                      <input type="password" name="password" placeholder="Senha"/>
+                      <input type="password" name="confirmPassword" placeholder="Confirmar Senha"/>
                       <button type="submit">Criar Wallet</button>
                       <p class="message">Já Registrado? <a href="#">Logar</a></p>
                     </form>
