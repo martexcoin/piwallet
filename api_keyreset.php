@@ -15,7 +15,6 @@ if ($con->query($sql) === TRUE) {
 	$arraytag = array(
 		'key' => "$newkey",
 		'usuario' => "$user");
-    //echo "Record updated successfully: $newkey";
     $json = json_encode($arraytag);
     echo "$json";
 } else {
