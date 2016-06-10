@@ -37,7 +37,7 @@ if (!WITHDRAWALS_ENABLED) {
 
 }
 
-echo json_encode(array("id" => "$id", "username" => "$username", "For Address" => "$foraddress", "Amount Send" => "$amounttosent"));
+echo json_encode(array("id" => "$id", "username" => "$username", "For Address" => "$foraddress", "Amount Send" => "$amounttosent", "TXID" => "$apibal"));
 
 
 
