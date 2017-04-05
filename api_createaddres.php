@@ -17,14 +17,17 @@ $client = new Client($rpc_host, $rpc_port, $rpc_user, $rpc_pass);
 $apibal = $client->getBalance($username);
 $newaddr = $client->getnewaddress($username);
 }
-echo json_encode(array("id" => "$id", "username" => "$username", "balance" => "$apibal", "newaddress" => "$newaddr"));
+
 
 $newkey = sha1(md5("$id.$username.$hello"));
 $sql = "UPDATE users SET api_key='$newkey' where api_key = '$key'";
-if ($con->query($sql) === TRUE) {
-	echo "Key Trocada Automaticamente";
-} else {
-    echo "Error updating record: " . $conn->error;
+if ($con->query($sql) !== TRUE) {
+    // apenas mostrar mensagem adiciona se ocorrer erro
+    die(json_encode(array("error" => 1, "msg" => $conn->error)));
 }
+
+// apenas mandar o key id do usuário
+die(json_encode(array("id" => "$id", "username" => "$username", "balance" => "$apibal", "newaddress" => "$newaddr")));
+
 ?>
 
